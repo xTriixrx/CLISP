@@ -1,0 +1,1 @@
+(make-node :name 'ANIMAL :yes (make-node :name 'MAMMAL :yes (make-node :name 'BEAR)) :no (make-node :name 'AUTOMOBILE :yes (make-node :name 'AUDI) :no (make-node :name 'COMPANY :no (make-node :name 'FOOD :yes (make-node :name 'FRUIT :yes (make-node :name 'PINEAPPLE))))))
