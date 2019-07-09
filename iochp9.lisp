@@ -95,27 +95,20 @@
 ;;; Exercise 9.15
 ;;; This function takes an input list and prints its hybrid notation.
 ;;; EX: (A . NIL) -> (A) (A . B) -> (A . B) ((A . NIL) . (B . (C . D))) -> ((A) B C . D)
-;;; EVEN MORE TRICKY THAN THE PREVIOUS
+
 (defun hybrid-prin1 (lst)
-	(labels ((print-cdr (sub-lst)
-		(cond ((null (cdr sub-lst)) (format t ")"))
-			((atom lst) (format t "  .  ~S)" lst))
-			(t (format t "  .  ~S)" (print-cdr (cdr sub-lst)))))))
-		(cond ((null lst) nil)
-			((atom lst) (format t "(~S" lst))
-			((listp lst) (hybrid-prin1 (car lst)) (print-cdr (hybrid-prin1 (cdr lst))))
-			(t (hybrid-prin1 (car lst)) (print-cdr (cdr lst)))))nil)
-
-
-
-
-
-
-
-
-
-
-
-
-
+	(labels ((hybrid-cdr (lst)
+				(cond ((null lst)
+						(format t ")"))
+					  ((atom lst)
+						(format t " . ~s)" lst))
+					  (t
+						(format t " ")
+						(hybrid-prin1 (car lst))
+						(hybrid-cdr (cdr lst))))))
+		(cond ((atom lst)
+			   (format t "~s" lst))
+			  (t (format t "(")
+				 (hybrid-prin1 (first lst))
+				 (hybrid-cdr (rest lst))))) nil)
 
