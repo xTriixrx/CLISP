@@ -14,7 +14,12 @@ Files I have written in Common Lisp v2.49
     basic/early A.I. development for future projects, and to help lead to a stonger understanding of A.I. to lead
     into my next personal learning assignment.
     
+    The third branch is for Project Euler Questions and Answer's which are math based problems that need to be answered by writing 
+    programs to solve them. I have choosen to sharpen my Common Lisp skills again to dig into the PAIP branch again as well as Math
+    skills in getting into Project Euler questions. You can find out more about Project Euler at https://projecteuler.net. 
+    
     COMING SOON:
     Chapters 4+ of Paradigms of Artificial Intelligence Programming: Case Studies In Common Lisp by: Peter Norvig PART1
     Chapters 4+ of Paradigms of Artificial Intelligence Programming: Case Studies In Common Lisp by: Peter Norvig PART2
+    Project Euler Questions and Asnwer's Problems 4+
     TBD
