@@ -1,0 +1,10 @@
+Question:
+
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143?
+
+Answer: 6857
+
+Using (largest-prime-factor 600851475143) will produce the atom type with the value of 6857.
+(atom (largest-prime-factor 600851475143))
